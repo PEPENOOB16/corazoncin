@@ -1,173 +1,241 @@
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
-  font-family: Solitreo;
+    font-family: Solitreo;
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
-  background: #fee2e9;
-  font-family: "Pangolin", cursive;
-  font-size: 1vmin;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: #fee2e9;
+    font-family: "Pangolin", cursive;
+    font-size: 1vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
-  position: relative;
-  top: 0vmin;
+    position: relative;
+    top: 0vmin;
 }
 
 .envelope {
-  position: relative;
-  background: #f980a1;
-  height: 30vmin;
-  width: 47.9vmin;
+    position: relative;
+    background: #f980a1;
+    height: 30vmin;
+    width: 47.9vmin;
 }
 
 .card {
-  position: absolute;
-  background: white;
-  height: 25vmin;
-  width: 43vmin;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  left: 2.5vmin;
-  top: 0vmin;
-  animation: slide-rev 0.2s ease-out;
+    position: absolute;
+    background: white;
+    height: 25vmin;
+    width: 43vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 2.5vmin;
+    top: 0vmin;
+    animation: slide-rev 0.2s ease-out;
 }
 
 .message {
-  position: absolute;
-  top: 2vmin;
-  font-size: 19px;
+    position: absolute;
+    top: 2vmin;
+    font-size: 19px;
+    text-align: center; /* Centrar el texto en pantallas pequeñas */
 }
 
 .cover {
-  position: absolute;
-  height: 0;
-  width: 0;
-  border-bottom: 15vmin solid #fba7bd;
-  border-left: 24vmin solid transparent;
-  border-right: 24vmin solid transparent;
-  top: 15vmin;
-  z-index: 3;
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-bottom: 15vmin solid #fba7bd;
+    border-left: 24vmin solid transparent;
+    border-right: 24vmin solid transparent;
+    top: 15vmin;
+    z-index: 3;
 }
 
 .cover::after {
-  /*left triangle*/
-  position: absolute;
-  content: "";
-  border-left: 24.5vmin solid #fcbbcc;
-  border-bottom: 15vmin solid transparent;
-  border-top: 15vmin solid transparent;
-  top: -15vmin;
-  left: -24vmin;
+    position: absolute;
+    content: "";
+    border-left: 24.5vmin solid #fcbbcc;
+    border-bottom: 15vmin solid transparent;
+    border-top: 15vmin solid transparent;
+    top: -15vmin;
+    left: -24vmin;
 }
 
 .cover::before {
-  position: absolute;
-  content: "";
-  border-right: 24.5vmin solid #fcbbcc;
-  border-bottom: 15vmin solid transparent;
-  border-top: 15vmin solid transparent;
-  top: -15vmin;
-  left: -0.5vmin;
+    position: absolute;
+    content: "";
+    border-right: 24.5vmin solid #fcbbcc;
+    border-bottom: 15vmin solid transparent;
+    border-top: 15vmin solid transparent;
+    top: -15vmin;
+    left: -0.5vmin;
 }
 
 .lid {
-  position: absolute;
-  height: 0;
-  width: 0;
-  border-top: 15vmin solid #f980a1;
-  border-left: 24vmin solid transparent;
-  border-right: 24vmin solid transparent;
-  top: 0;
-  transform-origin: top;
-  animation: open-rev 2s;
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-top: 15vmin solid #f980a1;
+    border-left: 24vmin solid transparent;
+    border-right: 24vmin solid transparent;
+    top: 0;
+    transform-origin: top;
+    animation: open-rev 2s;
 }
 
 .container:hover .lid {
-  animation: open 0.5s;
-  animation-fill-mode: forwards;
+    animation: open 0.5s;
+    animation-fill-mode: forwards;
 }
 
 .container:hover .card {
-  animation: slide 0.2s;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
+    animation: slide 0.2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
 }
 
 .shadow {
-  position: relative;
-  top: 3vmin;
-  border-radius: 50%;
-  opacity: 0.7;
-  height: 2vmin;
-  width: 48vmin;
-  background: #e8c5d0;
+    position: relative;
+    top: 3vmin;
+    border-radius: 50%;
+    opacity: 0.7;
+    height: 2vmin;
+    width: 48vmin;
+    background: #e8c5d0;
 }
 
 .heart {
-  position: relative;
-  width: 5vmin;
-  height: 4vmin;
-  top: 11vmin;
-  left: 0vmin;
+    position: relative;
+    width: 5vmin;
+    height: 4vmin;
+    top: 11vmin;
+    left: 0vmin;
 }
 
 .heart:before,
 .heart:after {
-  position: absolute;
-  content: "";
-  left: 2.5vmin;
-  top: 7vim;
-  width: 2.5vmin;
-  height: 4vmin;
-  background: #f40b4a;
-  border-radius: 2.5vmin 2.5vmin 0 0;
-  transform: rotate(-45deg);
-  transform-origin: 0 100%;
+    position: absolute;
+    content: "";
+    left: 2.5vmin;
+    top: 7vim;
+    width: 2.5vmin;
+    height: 4vmin;
+    background: #f40b4a;
+    border-radius: 2.5vmin 2.5vmin 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
 }
 
 .heart:after {
-  left: 0;
-  transform: rotate(45deg);
-  transform-origin: 100% 100%;
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
 }
 
 @keyframes open {
-  100% {
-    transform: rotatex(180deg);
-  }
+    100% {
+        transform: rotatex(180deg);
+    }
 }
+
 @keyframes slide {
     100% {
         transform: translatey(-30vmin);
-        height: 50vmin; /* Aumenta la altura cuando sube */
+        height: 50vmin;
         z-index: 2;
-      }
-  
+    }
 }
+
 @keyframes open-rev {
-  from {
-    transform: rotatex(-180deg);
-  }
+    from {
+        transform: rotatex(-180deg);
+    }
 }
+
 @keyframes slide-rev {
     from {
         transform: translatey(-30vmin);
         height: 50vmin;
-      }
-      to {
+    }
+
+    to {
         transform: translatey(0);
-        height: 35vmin; /* Vuelve a su tamaño original al cerrar */
-      }
+        height: 35vmin;
+    }
+}
+
+/* Media Queries para pantallas de celulares */
+@media (max-width: 768px) {
+    body {
+        font-size: 2vmin; /* Aumentar el tamaño de fuente en celulares */
+    }
+
+    .envelope {
+        width: 90vw; /* El sobre ocupa el 90% del ancho de la pantalla */
+        height: 60vw; /* Ajustar la altura proporcionalmente */
+    }
+
+    .card {
+        width: 80vw;
+        height: 50vw;
+        left: 5vw; /* Centrar la tarjeta */
+    }
+
+    .cover {
+        border-bottom: 30vw solid #fba7bd;
+        border-left: 45vw solid transparent;
+        border-right: 45vw solid transparent;
+        top: 30vw;
+    }
+
+    .cover::after {
+        border-left: 45.5vw solid #fcbbcc;
+        border-bottom: 30vw solid transparent;
+        border-top: 30vw solid transparent;
+        top: -30vw;
+        left: -45vw;
+    }
+
+    .cover::before {
+        border-right: 45.5vw solid #fcbbcc;
+        border-bottom: 30vw solid transparent;
+        border-top: 30vw solid transparent;
+        top: -30vw;
+        left: -0.5vw;
+    }
+
+    .lid {
+        border-top: 30vw solid #f980a1;
+        border-left: 45vw solid transparent;
+        border-right: 45vw solid transparent;
+    }
+
+    .shadow {
+        width: 90vw;
+    }
+
+    .heart {
+        width: 10vw;
+        height: 8vw;
+        top: 22vw;
+    }
+
+    .heart:before,
+    .heart:after {
+        left: 5vw;
+        width: 5vw;
+        height: 8vw;
+        border-radius: 5vw 5vw 0 0;
+    }
 }
